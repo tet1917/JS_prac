@@ -7,7 +7,7 @@ let val = 0;
 let val2 = val;
 val2 = 1;
 
-// console.log(val); // 問題１
+// console.log(val); // 問題１  0が表示
 
 let obj = {
     prop1: 10
@@ -15,7 +15,7 @@ let obj = {
 const obj2 = obj;
 obj2.prop1 = 9;
 
-// console.log(obj); // 問題２
+// console.log(obj); // 問題２　prop1:9と表示
 
 function fn1(arg) {
     arg.prop2 = 8;

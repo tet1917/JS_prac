@@ -7,3 +7,12 @@ const person = {
     }
 }
 person.hello();
+
+function fn(ref) {
+    ref();
+}
+
+fn(person.hello)
+
+//オブジェクトのメソッドー＞呼び出し元のオブジェクト
+//関数ー＞グローバルオブジェクト
