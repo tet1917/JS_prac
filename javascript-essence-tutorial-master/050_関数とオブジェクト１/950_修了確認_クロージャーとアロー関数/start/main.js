@@ -12,6 +12,9 @@ function addNumberFactory(num) {
     return addNumber;
 }
 
+const addNumberFactory = num => value => num + value;
+
+
 const add5 = addNumberFactory(5);
 const result = add5(10);
 console.log(result);
@@ -20,16 +23,24 @@ console.log(result);
  * 問題２：
  * incrementFactoryを短く書き直してみましょう。
  */
-function incrementFactory() {
+// function incrementFactory() {
     
+//     let num = 0;
+
+//     function a() {
+//         num = num + 1;
+//         console.log(num);
+//     }
+
+//     return a;
+// }
+
+const incrementFactory = () =>{
     let num = 0;
-
-    function a() {
-        num = num + 1;
+    return () =>{
+        num = num +1;
         console.log(num);
-    }
-
-    return a;
+    };
 }
 
 const increment = incrementFactory();

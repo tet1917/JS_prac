@@ -9,10 +9,15 @@
  * 
  */
 function hello(name) {
-  
+  return function () {
+    console.log('hello'+name)
+  }
 }
 
 /**
  * 実行文は以下の通りです。
  */
+
+//setTimeoutは関数を第一引数に取ってあげるから、
+//returnでは、関数を返してあげるようなものを作る。
 setTimeout(hello('Tom'), 1000);
